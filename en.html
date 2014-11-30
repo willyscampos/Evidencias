@@ -1,0 +1,32 @@
+﻿<div class="scrollable" ng-controller="enqueteController">
+
+    <div class="scrollable-content">
+        <div style="text-align: center;">
+            <img src="client/Noticias72.png" style="padding: 10px" />
+            <h3>Enquete</h3>
+        </div>
+
+        <form ng-show="show">
+
+            <div class="form-group" ng-show="showbutton">
+                <label for="matricula">{{Questoes[0].enq_id}}.{{Questoes[0].enq_pergunta}}</label>                
+                <div class="radio" ng-repeat="item in Questoes">
+                    <label>
+                        <input type="radio"  name="opcao" value="{{item.res_id}}" ng-model="$parent.opcao">
+                        {{item.res_opcao}}
+                    </label>
+                </div>                
+            </div>
+
+            <span class="input-group-btn" ng-show="showbutton">
+                <button class="btn btn-primary" ng-click="RegistraEnquete()">Salvar</button>
+            </span>
+
+            <div id="lMessage"></div>
+
+        </form>
+
+        <div ng-show="alerta" class="alert alert-danger" role="alert">Favor efetuar regisro de identificação</div>
+    </div>
+
+</div>

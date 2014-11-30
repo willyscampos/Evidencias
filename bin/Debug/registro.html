@@ -1,0 +1,33 @@
+﻿<div class="scrollable" ng-controller="registroController">
+
+    <div class="scrollable-content">
+        <div style="text-align: center;">
+            <img src="client/Minhaprogramacao.png" style="padding: 10px" />
+            <h3>Registro</h3>
+        </div>
+
+        <form ng-show="lControle">
+            <div class="form-group">
+                <label for="documento">Descrição </label>
+                <textarea ng-model="evi_descricao"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="documento">Data</label>
+                <input type="date" class="form-control" id="Email1" placeholder="Senha" ng-model="evi_data">
+            </div>
+
+            <span class="input-group-btn">
+                <button class="btn btn-primary" ng-click="Registro()">Registro</button>
+            </span>
+
+            <div id="lMessage"></div>
+        </form>
+
+        <div id="lMessage2" ng-show="!lControle">
+            <p class="alert alert-warning">Usuário não logado</p>
+            <a href="#/logon" class="btn btn-primary">Entrar</a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="scrollable" ng-controller="logonController">
+
+    <div class="scrollable-content">
+        <div style="text-align: center;">
+            <img src="client/Minhaprogramacao.png" style="padding: 10px" />
+            <h3>Cadastro</h3>
+        </div>
+
+
+        <form>
+                                    
+           <div class="form-group">
+                <label for="documento">Email</label>
+                <input type="email" class="form-control" id="Text1" placeholder="Email" ng-model="usu_loginemail">
+            </div>                      
+
+            <div class="form-group">
+                <label for="documento">Senha</label>
+                <input type="password" class="form-control" id="Email1" placeholder="Senha" ng-model="usu_senha">
+            </div>                      
+
+            <span class="input-group-btn">
+                <button class="btn btn-primary" ng-click="Registro()">Salvar</button>
+            </span>
+
+            <div id="lMessage"></div>
+
+        </form>
+    </div>
+
+</div>
