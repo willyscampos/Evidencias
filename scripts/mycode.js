@@ -52,7 +52,7 @@ app.controller('MainController', function ($rootScope,$scope, analytics, $timeou
         $scope.lwidth = window.innerWidth;$scope.lheight = window.innerHeight;$scope.tsplash = true;$scope.tsplash2 = false;
         $scope.tvivo = false;
 
-        $rootScope.servidor = 'http://192.168.10.98:9090';
+        $rootScope.servidor = 'http://10.0.0.107:9090';
         $rootScope.usuario = 0;
         $rootScope.nome = "";
         $rootScope.uuid = 'idxpt0';
