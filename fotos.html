@@ -6,20 +6,27 @@
             <h3>Fotos</h3>
         </div>
 
+        <button class="btn" ng-click="xico()">Get Foto</button>
+
         <form ng-show="lControle">
-            <button class="btn btn-primary" ng-click="getFoto()">Get Foto</button>
+            <button class="btn btn-primary" ng-click="captureImage()">Get Foto</button>
 
             <div style="width: 100%; height: 220px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-                <img id="IMG_1" src="" style="position: absolute; max-width: 100%; max-height: 100%;">
             </div>
-
+            <img id="img01" />
+            <div id="uploadPreview"></div>
             <div id="lMessage"></div>
+
+
+
         </form>
 
         <div id="lMessage2" ng-show="!lControle">
             <p class="alert alert-warning">Usuário não logado</p>
             <a href="#/logon" class="btn btn-primary">Entrar</a>
         </div>
+
+
     </div>
 
 </div>

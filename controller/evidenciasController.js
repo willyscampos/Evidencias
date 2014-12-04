@@ -12,8 +12,7 @@
     $scope.emp_password = "";
     $scope.emp_email = "";
     $scope.lControle = true;
- 
-    console.log($rootScope.usuario);
+     
 
     $scope.InformacaoUsuario = {
         usu_id: $rootScope.usuario

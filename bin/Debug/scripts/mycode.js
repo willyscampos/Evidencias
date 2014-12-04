@@ -2,7 +2,8 @@
   "ngRoute",
   "mobile-angular-ui",
   "mobile-angular-ui.touch",
-  "mobile-angular-ui.scrollable"
+  "mobile-angular-ui.scrollable",
+  "ngCordova"
 ]);
 
 app.config(function ($routeProvider, $locationProvider) {
@@ -52,7 +53,7 @@ app.controller('MainController', function ($rootScope,$scope, analytics, $timeou
         $scope.lwidth = window.innerWidth;$scope.lheight = window.innerHeight;$scope.tsplash = true;$scope.tsplash2 = false;
         $scope.tvivo = false;
 
-        $rootScope.servidor = 'http://localhost:9090';
+        $rootScope.servidor = 'http://hackingcode.com.br:907';
         $rootScope.usuario = 0;
         $rootScope.nome = "";
         $rootScope.uuid = 'idxpt0';
