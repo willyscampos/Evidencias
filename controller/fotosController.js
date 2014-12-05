@@ -77,8 +77,7 @@
     //}
 
     $scope.xico = function () {
-        $cordovaBarcodeScanner.scan().then(function (barcodeData) {
-			alert(barcodeData[0].text);
+        $cordovaBarcodeScanner.scan().then(function (barcodeData) {			
 			alert(barcodeData.text);
             // Success! Barcode data is here
         }, function (error) {
