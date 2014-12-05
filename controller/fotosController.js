@@ -78,6 +78,7 @@
 
     $scope.xico = function () {
         $cordovaBarcodeScanner.scan().then(function (barcodeData) {
+			alert(barcodeData);
             // Success! Barcode data is here
         }, function (error) {
             // An error occurred
