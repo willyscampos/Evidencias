@@ -2,6 +2,8 @@
 
     $scope.lControle = true;
     $scope.myimage = null;
+    $scope.par_code = "";
+    $scope.par_nome = "";
 
     //    alert($rootScope.usuario);
     if (($rootScope.usuario == 0)) {
@@ -18,7 +20,7 @@
             // An error occured. Show a message to the user
         });
     }
-        
+
 
     //$cordovaBarcodeScanner
     //   .scan()
@@ -77,13 +79,30 @@
     //}
 
     $scope.xico = function () {
-        $cordovaBarcodeScanner.scan().then(function (barcodeData) {			
-			alert(barcodeData.text);
+
+        $cordovaBarcodeScanner.scan().then(function (barcodeData) {
             // Success! Barcode data is here
+            $scope.par_code = barcodeData.text;
+
+            $scope.Usuario = {
+                par_code1: $scope.par_code,
+                par_code2: $scope.par_code
+            };
+
+            ////alert($scope.par_code);
+            //console.log($scope.Usuario);
+
+            if (1 == 1) {
+                $('#lMessage').empty();
+                $http.post('' + $rootScope.servidor + '/AddRegistro', $scope.Usuario).success(confirmaCallback);
+            } else {
+                $('#lMessage').append('<p class="alert alert-warning">Atenção ! No....</p>');
+            }
+
         }, function (error) {
             // An error occurred
         });
-    }        
+    }
 
     //$cordovaCapture.captureVideo(options).then(function (videoData) {
     //    // Success! Video data is here
@@ -198,6 +217,17 @@
         console.log(error.code);
     }
 
+    function confirmaCallback(data, status) {
+        $scope.par_nome = data[0].par_nome || '----';
+
+        //alert(data[0].par_nome);
+        if (data.error) {
+            $('#lMessage').append('<p class="alert alert-danger">Erro ! Server error, tente novamente</p>');
+
+        }
+
+        //alert($scope.par_nome);
+    }
 
 
 

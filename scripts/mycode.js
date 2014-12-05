@@ -54,6 +54,7 @@ app.controller('MainController', function ($rootScope,$scope, analytics, $timeou
         $scope.tvivo = false;
 
         $rootScope.servidor = 'http://hackingcode.com.br:907';
+        //$rootScope.servidor = 'http://localhost:907';
         $rootScope.usuario = 0;
         $rootScope.nome = "";
         $rootScope.uuid = 'idxpt0';
